@@ -359,3 +359,13 @@
 
 </main>
 
+@inject IJSRuntime JSRuntime
+
+@code {
+
+    protected override void OnAfterRender(bool x)
+    {
+        JSRuntime.InvokeVoidAsync("mdc.autoInit");
+    }
+}
+
