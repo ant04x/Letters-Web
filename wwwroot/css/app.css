@@ -4,12 +4,6 @@
     --mdc-theme-secondary: #6200ee
 }
 
-app {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
 html {
     height: 100%
 }
@@ -133,4 +127,15 @@ body main {
 
 .mdc-top-app-bar {
     background-color: #fff
+}
+
+#welcome-app {
+    height:100vh;
+    width:100%;
+    display:flex;
+}
+
+#welcome-app-image {
+    width:7.5em;
+    margin:auto;
 }

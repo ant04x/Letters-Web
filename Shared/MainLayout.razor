@@ -1,11 +1,361 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="sidebar">
-    <NavMenu />
-</div>
 
-<div class="main">
-    <div class="content px-4">
-        @Body
+<NavMenu />
+
+<main>
+
+    <div id="leftMenu">
+
+        <label class="searchBar mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon" data-mdc-auto-init="MDCTextField">
+            <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+            <i class="mdc-text-field__icon mdc-text-field__icon--trailing" tabindex="0" role="button">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path d="M10,2.75 C14.0040644,2.75 17.25,5.99593556 17.25,10 C17.25,11.7318729 16.6427468,13.3219143 15.6295486,14.5688158 L20.5303301,19.4696699 C20.8232233,19.7625631 20.8232233,20.2374369 20.5303301,20.5303301 C20.2640635,20.7965966 19.8473998,20.8208027 19.5537883,20.6029482 L19.4696699,20.5303301 L14.5688158,15.6295486 C13.3219143,16.6427468 11.7318729,17.25 10,17.25 C5.99593556,17.25 2.75,14.0040644 2.75,10 C2.75,5.99593556 5.99593556,2.75 10,2.75 Z M10,4.25 C6.82436269,4.25 4.25,6.82436269 4.25,10 C4.25,13.1756373 6.82436269,15.75 10,15.75 C13.1756373,15.75 15.75,13.1756373 15.75,10 C15.75,6.82436269 13.1756373,4.25 10,4.25 Z" id="🎨-Color"></path>
+                </svg>
+            </i>
+            <span class="mdc-floating-label" id="my-label-id">Búsqueda</span>
+            <div class="mdc-line-ripple"></div>
+        </label>
+
+        <ul id="my-list" class="emailList mdc-list mdc-list--two-line" role="listbox group" aria-label="List with checkbox items">
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="0">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-1" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-1">
+                    <span class="mdc-list-item__primary-text">GitHub - A previously authorized first-party GitHub OAuth application has been granted additional scopes</span>
+                    <span class="mdc-list-item__secondary-text">Hey ant04x! Previously, a first-party GitHub OAuth application (Visual Studio) had gist,</span>
+                </span>
+            </li>
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="1">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-3" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-3">
+                    <span class="mdc-list-item__primary-text">Microsoft 365 - Welcome to Microsoft Teams</span>
+                    <span class="mdc-list-item__secondary-text">Here's how to get started. Thanks for signing up for Microsoft Teams</span>
+                </span>
+            </li>
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="2">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-3" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-3">
+                    <span class="mdc-list-item__primary-text">Figma - Please confirm your email</span>
+                    <span class="mdc-list-item__secondary-text">You know the drill... Before we can get started, we have to confirm your email address. Just click here:</span>
+                </span>
+            </li>
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="3">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-3" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-3">
+                    <span class="mdc-list-item__primary-text">Figma - Please confirm your email</span>
+                    <span class="mdc-list-item__secondary-text">You know the drill... Before we can get started, we have to confirm your email address. Just click here:</span>
+                </span>
+            </li>
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="4">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-3" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-3">
+                    <span class="mdc-list-item__primary-text">Figma - Please confirm your email</span>
+                    <span class="mdc-list-item__secondary-text">You know the drill... Before we can get started, we have to confirm your email address. Just click here:</span>
+                </span>
+            </li>
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="5">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-3" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-3">
+                    <span class="mdc-list-item__primary-text">Figma - Please confirm your email</span>
+                    <span class="mdc-list-item__secondary-text">You know the drill... Before we can get started, we have to confirm your email address. Just click here:</span>
+                </span>
+            </li>
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="6">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-3" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-3">
+                    <span class="mdc-list-item__primary-text">Figma - Please confirm your email</span>
+                    <span class="mdc-list-item__secondary-text">You know the drill... Before we can get started, we have to confirm your email address. Just click here:</span>
+                </span>
+            </li>
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="7">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-3" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-3">
+                    <span class="mdc-list-item__primary-text">Figma - Please confirm your email</span>
+                    <span class="mdc-list-item__secondary-text">You know the drill... Before we can get started, we have to confirm your email address. Just click here:</span>
+                </span>
+            </li>
+            <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="8">
+                <span class="mdc-list-item__graphic">
+                    <div class="mdc-checkbox">
+                        <input type="checkbox"
+                               class="mdc-checkbox__native-control"
+                               id="demo-list-checkbox-item-3" />
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark"
+                                 viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path"
+                                      fill="none"
+                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </span>
+                <span class="mdc-list-item__text" for="demo-list-checkbox-item-3">
+                    <span class="mdc-list-item__primary-text">Figma - Please confirm your email</span>
+                    <span class="mdc-list-item__secondary-text">You know the drill... Before we can get started, we have to confirm your email address. Just click here:</span>
+                </span>
+            </li>
+        </ul>
+
+        <div class="botTabBar mdc-tab-bar" role="tablist" data-mdc-auto-init='MDCTabBar'>
+            <div class="mdc-tab-scroller">
+                <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
+                    <div class="mdc-tab-scroller__scroll-content">
+                        <!---->
+                        <button role="tab" class="mdc-tab mdc-tab--active" aria-selected="true" tabindex="0" id="goog_1357106838-FIXED-0">
+                            <span class="mdc-tab__content">
+                                <i aria-hidden="true" class="material-icons mdc-tab__icon">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path d="M10.5492,2.53274 C11.3872,1.82574 12.6128,1.82574 13.4508,2.53274 L20.2008,8.22728 C20.7076,8.65479 21,9.28403 21,9.94703 L21,19.75 C21,20.7165 20.2165,21.5 19.25,21.5 L16.25,21.5 C15.2835,21.5 14.5,20.7165 14.5,19.75 L14.5,14.75 C14.5,14.3358 14.1642,14 13.75,14 L10.25,14 C9.83579,14 9.5,14.3358 9.5,14.75 L9.5,19.75 C9.5,20.7165 8.7165,21.5 7.75,21.5 L4.75,21.5 C3.7835,21.5 3,20.7165 3,19.75 L3,9.94703 C3,9.28403 3.29241,8.65479 3.79916,8.22728 L10.5492,2.53274 Z" id="🎨-Color"></path>
+                                    </svg>
+                                </i>
+                            </span>
+                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                <span class="mdc-tab-indicator__content
+                         mdc-tab-indicator__content--underline"></span>
+                            </span>
+                            <span class="mdc-tab__ripple mdc-ripple-upgraded" style="--mdc-ripple-fg-size:95px; --mdc-ripple-fg-scale:1.85686; --mdc-ripple-fg-translate-start:25.5px, -25.5px; --mdc-ripple-fg-translate-end:32.1641px, -23.5px;"></span>
+                        </button>
+                        <!---->
+                        <button role="tab" class="mdc-tab" aria-selected="false" tabindex="-1" id="goog_1357106838-FIXED-1">
+                            <span class="mdc-tab__content">
+                                <i aria-hidden="true" class="material-icons mdc-tab__icon">
+                                    <svg width="24px" height="24px" viewBox="0 0 6.3499999 6.3500002" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path d="M 2.8465005,3.5221178 0.57852704,2.5242095 C 0.42067801,2.4547559 0.42281203,2.2352488 0.57107221,2.1642543 l 0.0246218,-0.00993 5.05139419,-1.68379791 c 0.1454341,-0.0484785 0.284238,0.0782059 0.2584131,0.22205374 l -0.00741,0.0289525 -1.683798,5.05139397 C 4.1597615,5.9365278 3.9410003,5.9547345 3.8565787,5.8136874 L 3.8444094,5.7900912 2.8465005,3.5221178 0.57852704,2.5242095 Z M 1.2092667,2.3681411 2.9525568,3.1352059 4.1926111,1.8953742 c 0.071037,-0.071037 0.182532,-0.076957 0.260312,-0.017759 l 0.02032,0.01776 c 0.071037,0.071037 0.076957,0.182532 0.017759,0.2603118 L 4.4732441,2.176007 3.2331898,3.4158387 4.0004771,5.1593512 5.3960824,0.9725357 Z" id="🎨-Color" />
+                                    </svg>
+                                </i>
+                            </span>
+                            <span class="mdc-tab-indicator">
+                                <span class="mdc-tab-indicator__content
+                         mdc-tab-indicator__content--underline" style=""></span>
+                            </span>
+                            <span class="mdc-tab__ripple mdc-ripple-upgraded" style="--mdc-ripple-fg-size:95px; --mdc-ripple-fg-scale:1.85686; --mdc-ripple-fg-translate-start:9.17188px, -11.5px; --mdc-ripple-fg-translate-end:32.1641px, -23.5px;"></span>
+                        </button>
+                        <!---->
+                        <button role="tab" class="mdc-tab" aria-selected="false" tabindex="-1" id="goog_1357106838-FIXED-2">
+                            <span class="mdc-tab__content">
+                                <i aria-hidden="true" class="material-icons mdc-tab__icon">
+                                    <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path d="M6.25,3 L17.75,3 C19.4830315,3 20.8992459,4.35645477 20.9948552,6.06557609 L21,6.25 L21,17.75 C21,19.4830315 19.6435452,20.8992459 17.9344239,20.9948552 L17.75,21 L6.25,21 C4.51696854,21 3.10075407,19.6435452 3.00514479,17.9344239 L3,17.75 L3,6.25 C3,4.51696854 4.35645477,3.10075407 6.06557609,3.00514479 L6.25,3 Z M8.32501359,14.5 L4.5,14.5 L4.5,17.75 C4.5,18.6681734 5.20711027,19.4211923 6.10647279,19.4941988 L6.25,19.5 L17.75,19.5 C18.6681734,19.5 19.4211923,18.7928897 19.4941988,17.8935272 L19.5,17.75 L19.5,14.5 L15.6749864,14.5 C15.3404023,16.1482847 13.9247166,17.4039882 12.2002976,17.4947422 L12,17.5 C10.2529748,17.5 8.78497652,16.3053441 8.36837329,14.6884005 L8.32501359,14.5 Z M17.75,4.5 L6.25,4.5 C5.3318266,4.5 4.57880766,5.20711027 4.5058012,6.10647279 L4.5,6.25 L4.5,13 L9,13 C9.37969577,13 9.69349096,13.2821539 9.74315338,13.6482294 L9.75,13.75 C9.75,14.9926407 10.7573593,16 12,16 C13.190864,16 14.1656449,15.0748384 14.2448092,13.9040488 L14.25,13.75 C14.25,13.3703042 14.5321539,13.056509 14.8982294,13.0068466 L15,13 L19.5,13 L19.5,6.25 C19.5,5.3318266 18.7928897,4.57880766 17.8935272,4.5058012 L17.75,4.5 Z M6.75,9.5 L17.25,9.5 C17.6642136,9.5 18,9.83578644 18,10.25 C18,10.6296958 17.7178461,10.943491 17.3517706,10.9931534 L17.25,11 L6.75,11 C6.33578644,11 6,10.6642136 6,10.25 C6,9.87030423 6.28215388,9.55650904 6.64822944,9.50684662 L6.75,9.5 L17.25,9.5 L6.75,9.5 Z M6.75,6.5 L17.25,6.5 C17.6642136,6.5 18,6.83578644 18,7.25 C18,7.62969577 17.7178461,7.94349096 17.3517706,7.99315338 L17.25,8 L6.75,8 C6.33578644,8 6,7.66421356 6,7.25 C6,6.87030423 6.28215388,6.55650904 6.64822944,6.50684662 L6.75,6.5 L17.25,6.5 L6.75,6.5 Z" id="🎨-Color"></path>
+                                    </svg>
+                                </i>
+                            </span>
+                            <span class="mdc-tab-indicator">
+                                <span class="mdc-tab-indicator__content
+                         mdc-tab-indicator__content--underline" style=""></span>
+                            </span>
+                            <span class="mdc-tab__ripple mdc-ripple-upgraded" style="--mdc-ripple-fg-size:102px; --mdc-ripple-fg-scale:1.91071; --mdc-ripple-fg-translate-start:33.3125px, -23px; --mdc-ripple-fg-translate-end:34.1484px, -15px;"></span>
+                        </button>
+                        <!---->
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
+
+    <div class="contentMail">
+
+        <div class="mdc-card mdc-card--outlined emailCard">
+            <div class="mdc-card__primary-action">
+
+                <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+                    <li class="mdc-list-item" tabindex="0">
+                        <span class="mdc-list-item__ripple"></span>
+                        <span class="mdc-list-item__graphic material-icons" style="font-size: 40px;" aria-hidden="true">
+                            <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M 20 3.5 A 16.5 16.5 0 0 0 3.5 20 A 16.5 16.5 0 0 0 20 36.5 A 16.5 16.5 0 0 0 36.5 20 A 16.5 16.5 0 0 0 20 3.5 z M 19.994141 8.4628906 C 23.228455 8.4628906 25.851562 11.08404 25.851562 14.318359 C 25.851562 17.552649 23.228455 20.173828 19.994141 20.173828 C 16.759826 20.173828 14.138672 17.552649 14.138672 14.318359 C 14.138672 11.08404 16.759826 8.4628906 19.994141 8.4628906 z M 13.113281 22.517578 L 26.876953 22.517578 C 28.210715 22.517578 29.298409 23.566033 29.361328 24.884766 L 29.365234 25.005859 L 29.365234 25.445312 C 29.365234 27.644627 28.228673 29.291603 26.484375 30.353516 C 24.769158 31.397744 22.461927 31.886719 19.994141 31.886719 C 17.526357 31.886719 15.221109 31.397744 13.505859 30.353516 C 11.814401 29.323781 10.69526 27.742726 10.628906 25.642578 L 10.625 25.445312 L 10.625 25.005859 C 10.625 23.671481 11.675841 22.582387 12.994141 22.519531 L 13.113281 22.517578 z " id="🎨-Color" />
+                            </svg>
+                        </span>
+                        <span class="mdc-list-item__text">
+                            <span class="mdc-list-item__primary-text">GitHub (<span class="emailDirection">noreply@github.com</span>) - <span class="emailSendDate">17:24</span></span>
+                            <span class="mdc-list-item__secondary-text">A first-party GitHub OAuth application has been added to your account</span>
+                        </span>
+                        <span class="mdc-list-item__meta">
+                            <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Postponer">
+                                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path d="M10.3757381,12 C10.3757381,11.1029449 11.1029449,10.3757381 12,10.3757381 C12.8970551,10.3757381 13.6242619,11.1029449 13.6242619,12 C13.6242619,12.8970551 12.8970551,13.6242619 12,13.6242619 C11.1029449,13.6242619 10.3757381,12.8970551 10.3757381,12 Z M10.3757381,6 C10.3757381,5.10294494 11.1029449,4.37573813 12,4.37573813 C12.8970551,4.37573813 13.6242619,5.10294494 13.6242619,6 C13.6242619,6.89705506 12.8970551,7.62426187 12,7.62426187 C11.1029449,7.62426187 10.3757381,6.89705506 10.3757381,6 Z M10.3757381,18 C10.3757381,17.1029449 11.1029449,16.3757381 12,16.3757381 C12.8970551,16.3757381 13.6242619,17.1029449 13.6242619,18 C13.6242619,18.8970551 12.8970551,19.6242619 12,19.6242619 C11.1029449,19.6242619 10.3757381,18.8970551 10.3757381,18 Z" id="🎨-Color"></path>
+                                </svg>
+                            </button>
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="mdc-card mdc-card--outlined emailContent">
+                    @Body
+                </div>
+
+            </div>
+            <div class="mdc-card__actions">
+                <div class="mdc-card__action-buttons">
+                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Postponer">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M12,2 C17.523,2 22,6.478 22,12 C22,17.522 17.523,22 12,22 C6.477,22 2,17.522 2,12 C2,6.478 6.477,2 12,2 Z M12,3.667 C7.405,3.667 3.667,7.405 3.667,12 C3.667,16.595 7.405,20.333 12,20.333 C16.595,20.333 20.333,16.595 20.333,12 C20.333,7.405 16.595,3.667 12,3.667 Z M11.25,6 C11.6295,6 11.9434583,6.28233333 11.9931493,6.64827431 L12,6.75 L12,12 L15.25,12 C15.664,12 16,12.336 16,12.75 C16,13.1295 15.7176667,13.4434583 15.3517257,13.4931493 L15.25,13.5 L11.25,13.5 C10.8705,13.5 10.5565417,13.2176667 10.5068507,12.8517257 L10.5,12.75 L10.5,6.75 C10.5,6.336 10.836,6 11.25,6 Z" id="🎨-Color"></path>
+                        </svg>
+                    </button>
+                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="No marcar como leído">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M2.21967 2.21967C1.9534 2.48594 1.9292 2.9026 2.14705 3.19621L2.21967 3.28033L6.25424 7.3149C4.33225 8.66437 2.89577 10.6799 2.29888 13.0644C2.1983 13.4662 2.4425 13.8735 2.84431 13.9741C3.24613 14.0746 3.6534 13.8305 3.75399 13.4286C4.28346 11.3135 5.59112 9.53947 7.33416 8.39452L9.14379 10.2043C8.43628 10.9258 8 11.9143 8 13.0046C8 15.2138 9.79086 17.0046 12 17.0046C13.0904 17.0046 14.0788 16.5683 14.8004 15.8608L20.7197 21.7803C21.0126 22.0732 21.4874 22.0732 21.7803 21.7803C22.0466 21.5141 22.0708 21.0974 21.8529 20.8038L21.7803 20.7197L15.6668 14.6055L15.668 14.604L14.4679 13.4061L11.598 10.5368L11.6 10.536L8.71877 7.65782L8.72 7.656L7.58672 6.52549L3.28033 2.21967C2.98744 1.92678 2.51256 1.92678 2.21967 2.21967ZM10.2041 11.2655L13.7392 14.8006C13.2892 15.2364 12.6759 15.5046 12 15.5046C10.6193 15.5046 9.5 14.3853 9.5 13.0046C9.5 12.3287 9.76824 11.7154 10.2041 11.2655ZM12 5.5C10.9997 5.5 10.0291 5.64807 9.11109 5.925L10.3481 7.16119C10.8839 7.05532 11.4364 7 12 7C15.9231 7 19.3099 9.68026 20.2471 13.4332C20.3475 13.835 20.7546 14.0794 21.1565 13.9791C21.5584 13.8787 21.8028 13.4716 21.7024 13.0697C20.5994 8.65272 16.6155 5.5 12 5.5ZM12.1947 9.00928L15.996 12.81C15.8942 10.7531 14.2472 9.10764 12.1947 9.00928Z" />
+                        </svg>
+                    </button>
+                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Bloquear">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M12.0007042,2.00070416 C17.5235517,2.00070416 22.0007042,6.47785666 22.0007042,12.0007042 C22.0007042,17.5235517 17.5235517,22.0007042 12.0007042,22.0007042 C6.47785666,22.0007042 2.00070416,17.5235517 2.00070416,12.0007042 C2.00070416,6.47785666 6.47785666,2.00070416 12.0007042,2.00070416 Z M12.0007042,3.50070416 C7.30628378,3.50070416 3.50070416,7.30628378 3.50070416,12.0007042 C3.50070416,16.6951245 7.30628378,20.5007042 12.0007042,20.5007042 C16.6951245,20.5007042 20.5007042,16.6951245 20.5007042,12.0007042 C20.5007042,7.30628378 16.6951245,3.50070416 12.0007042,3.50070416 Z M7.75,11.25 L16.25,11.25 C16.6642136,11.25 17,11.5857864 17,12 C17,12.3796958 16.7178461,12.693491 16.3517706,12.7431534 L16.25,12.75 L7.75,12.75 C7.33578644,12.75 7,12.4142136 7,12 C7,11.6203042 7.28215388,11.306509 7.64822944,11.2568466 L7.75,11.25 L16.25,11.25 L7.75,11.25 Z" id="🎨-Color"></path>
+                        </svg>
+                    </button>
+                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Imprimir">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M15.7524932,3 C16.9951338,3 18.0024932,4.00735931 18.0024932,5.25 L18.002,6.003 L18.7524932,6.00357582 C20.546894,6.00533064 22.0011192,7.45877088 22.0038419,9.25243695 L22.0070905,15.2496558 C22.0089648,16.4918252 21.002055,17.5001987 19.7591046,17.5008698 L18,17.5 L18,18.75 C18,19.9926407 16.9926407,21 15.75,21 L8.25,21 C7.00735931,21 6,19.9926407 6,18.75 L6.00090581,17.5000498 L4.25,17.5000605 C3.00735931,17.5000605 2,16.4927012 2,15.2500605 L2,9.25357582 C2,7.45865038 3.45507456,6.00357582 5.25,6.00357582 L5.999,6.003 L6,5.25 C6,4.00735931 7.00735931,3 8.25,3 L15.7524932,3 Z M15.75,13.5 L8.25,13.5 C7.83578644,13.5 7.5,13.8357864 7.5,14.25 L7.5,18.75 C7.5,19.1642136 7.83578644,19.5 8.25,19.5 L15.75,19.5 C16.1642136,19.5 16.5,19.1642136 16.5,18.75 L16.5,14.25 C16.5,13.8357864 16.1642136,13.5 15.75,13.5 Z M20.365312,16.3100454 L20.329409,16.2817948 L20.4164732,16.4217152 L20.4164732,16.4217152 L20.467,16.508 L20.4412383,16.4409211 L20.4063935,16.3732143 L20.4063935,16.3732143 L20.365312,16.3100454 Z M18.7517595,7.50357546 L5.25,7.50357546 C4.28350169,7.50357546 3.5,8.2870775 3.5,9.25357582 L3.5,15.2500605 C3.5,15.6642741 3.83578644,16.0000605 4.25,16.0000605 L6,16 L6,14.25 C6,13.0073593 7.00735931,12 8.25,12 L15.75,12 C16.9926407,12 18,13.0073593 18,14.25 L18.0008705,16.0000667 L19.7826926,16.0004676 C20.1855356,15.9873794 20.5076962,15.6567442 20.5070818,15.2511986 L20.5038429,9.25398035 C20.5023762,8.28801222 19.7184619,7.50452103 18.7517595,7.50357546 Z M15.7524932,4.5 L8.25,4.5 C7.83578644,4.5 7.5,4.83578644 7.5,5.25 L7.499,6.003 L16.502,6.003 L16.5024932,5.25 C16.5024932,4.83578644 16.1667067,4.5 15.7524932,4.5 Z" id="🎨-Color"></path>
+                        </svg>
+                    </button>
+                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Enviar copia">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M19.75,11.5 C20.1296958,11.5 20.443491,11.7821539 20.4931534,12.1482294 L20.5,12.25 L20.5,17.25 C20.5,19.8004817 18.4898587,21.8814697 15.967428,21.9951121 L15.75,22 L8.25,22 C7.27043061,22 6.43706777,21.3740154 6.1281189,20.5002535 L15.75,20.5 L15.9344239,20.4948552 C17.5825052,20.4026605 18.9026605,19.0825052 18.9948552,17.4344239 L19,17.25 L19,12.25 C19,11.8357864 19.3357864,11.5 19.75,11.5 Z M17.25,9.5 C17.6296958,9.5 17.943491,9.78215388 17.9931534,10.1482294 L18,10.25 L18,17.25 C18,18.440864 17.0748384,19.4156449 15.9040488,19.4948092 L15.75,19.5 L5.75,19.5 C4.55913601,19.5 3.58435508,18.5748384 3.50519081,17.4040488 L3.5,17.25 L3.5,10.25 C3.5,9.83578644 3.83578644,9.5 4.25,9.5 C4.62969577,9.5 4.94349096,9.78215388 4.99315338,10.1482294 L5,10.25 L5,17.25 C5,17.6296958 5.28215388,17.943491 5.64822944,17.9931534 L5.75,18 L15.75,18 C16.1296958,18 16.443491,17.7178461 16.4931534,17.3517706 L16.5,17.25 L16.5,10.25 C16.5,9.83578644 16.8357864,9.5 17.25,9.5 Z M6.21833226,6.2162141 L10.2159775,2.21960142 C10.4820933,1.95355434 10.898411,1.9292261 11.1919956,2.14671565 L11.276116,2.21921714 L15.2795617,6.21582982 C15.572705,6.50847277 15.5731106,6.98334633 15.2804677,7.27648961 C15.0144286,7.5429835 14.5977858,7.56754542 14.3039883,7.34994182 L14.2198079,7.27739554 L11.5,4.563 L11.5,14.254946 C11.5,14.6346418 11.2178461,14.948437 10.8517706,14.9980994 L10.75,15.004946 C10.3703042,15.004946 10.056509,14.7227922 10.0068466,14.3567166 L10,14.254946 L10,4.556 L7.27885543,7.27701126 C7.01255447,7.54324343 6.59588767,7.56739566 6.30230432,7.34950328 L6.21819526,7.27687426 C5.9519631,7.01057331 5.92781086,6.5939065 6.14570325,6.30032315 L6.21833226,6.2162141 L10.2159775,2.21960142 L6.21833226,6.2162141 Z" id="🎨-Color"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="test">
+
+            <div class="mdc-card__action-icons">
+                <button id="buttonTest" class="mdc-fab mdc-fab--extended">
+                    <div class="mdc-fab__ripple"></div>
+                    <span class="material-icons mdc-fab__icon">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M13.9391717,4.99957288 L19.0001717,10.0605729 L9.06200371,19.9986565 C8.78512854,20.2755316 8.44079112,20.4753584 8.06302761,20.5783848 L2.94733805,21.9735729 C2.38746387,22.1262658 1.87373417,21.6125361 2.02642713,21.0526619 L3.4216152,15.9369724 C3.52464161,15.5592089 3.72446837,15.2148715 4.00134354,14.9379963 L13.9391717,4.99957288 Z M21.0303301,2.96966991 C22.4277928,4.36713263 22.4277928,6.63286737 21.0303301,8.03033009 L20.0601717,8.99957288 L14.9991717,3.93957288 L15.9696699,2.96966991 C17.3671326,1.5722072 19.6328674,1.5722072 21.0303301,2.96966991 Z" id="🎨-Color"></path>
+                        </svg>
+                    </span>
+                    <span class="mdc-fab__label">Contestar</span>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
