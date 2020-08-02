@@ -117,6 +117,17 @@ app {
     color: red;
 }
 
+#welcome-app {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+#welcome-app-image {
+    height: 7.5em;
+    margin: auto;
+}
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
