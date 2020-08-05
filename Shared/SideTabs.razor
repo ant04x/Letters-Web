@@ -3,7 +3,7 @@
         <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
             <div class="mdc-tab-scroller__scroll-content">
                 <!---->
-                <button type="button" role="tab" class="mdc-tab mdc-tab--active" aria-selected="true" tabindex="0" @onclick="@((e) => UpdateSideTabs("home"))">
+                <button @onclick="@(e => UpdateSideTabs("home"))" role="tab" class="mdc-tab mdc-tab--active" aria-selected="true" tabindex="0">
                     <span class="mdc-tab__content">
                         <i aria-hidden="true" class="material-icons mdc-tab__icon">
                             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -18,7 +18,7 @@
                     <span class="mdc-tab__ripple mdc-ripple-upgraded" style="--mdc-ripple-fg-size:95px; --mdc-ripple-fg-scale:1.85686; --mdc-ripple-fg-translate-start:25.5px, -25.5px; --mdc-ripple-fg-translate-end:32.1641px, -23.5px;"></span>
                 </button>
                 <!---->
-                <button type="button" role="tab" class="mdc-tab" aria-selected="false" tabindex="1" @onclick="@((e) => UpdateSideTabs("sended"))">
+                <button @onclick="@(e => UpdateSideTabs("sended"))" role="tab" class="mdc-tab" aria-selected="false" tabindex="1">
                     <span class="mdc-tab__content">
                         <i aria-hidden="true" class="material-icons mdc-tab__icon">
                             <svg width="24px" height="24px" viewBox="0 0 6.3499999 6.3500002" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -33,7 +33,7 @@
                     <span class="mdc-tab__ripple mdc-ripple-upgraded" style="--mdc-ripple-fg-size:95px; --mdc-ripple-fg-scale:1.85686; --mdc-ripple-fg-translate-start:9.17188px, -11.5px; --mdc-ripple-fg-translate-end:32.1641px, -23.5px;"></span>
                 </button>
                 <!---->
-                <button type="button" role="tab" class="mdc-tab" aria-selected="false" tabindex="2" @onclick="@((e) => UpdateSideTabs("all"))">
+                <button  @onclick="@(e => UpdateSideTabs("all"))" role="tab" class="mdc-tab" aria-selected="false" tabindex="2">
                     <span class="mdc-tab__content">
                         <i aria-hidden="true" class="material-icons mdc-tab__icon">
                             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
