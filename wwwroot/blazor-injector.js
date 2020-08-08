@@ -1,14 +1,9 @@
 window.blazorInjector = () => {
 
     // Se obtiene el elemento del HTML suponiendo q no haya que MDCTabBar se pueda acceder sin ruta mdc...
-    const sideTab = new mdc.tab.MDCTabFoundation(document.querySelector('.mdc-tab-bar'));
+    const sideTab = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
-    sideTab.init();
-
-    console.log("Listeners loaded.");
-
-    sideTab.handleClick(() => {
-        console.log("Hello there!");
+    sideTab.listen('MDCTabBar:activated', (e) => {
+        console.log("Hello Friend.");
     });
-
 }
