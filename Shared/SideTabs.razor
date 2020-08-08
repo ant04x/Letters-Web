@@ -3,11 +3,11 @@
         <div class="mdc-tab-scroller__scroll-area" style="margin-bottom: 0px;">
             <div class="mdc-tab-scroller__scroll-content">
                 <!---->
-                <button @onclick="@(e => UpdateSideTabs("home"))" role="tab" class="mdc-tab mdc-tab--active" aria-selected="true" tabindex="0">
+                <button role="tab" class="mdc-tab mdc-tab--active" aria-selected="true" tabindex="0">
                     <span class="mdc-tab__content">
                         <i aria-hidden="true" class="material-icons mdc-tab__icon">
                             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path d="@tabIcons["home"][0]"/>
+                                <path d="@tabIcons["home"][0]" />
                             </svg>
                         </i>
                     </span>
@@ -17,11 +17,11 @@
                     <span class="mdc-tab__ripple" style="--mdc-ripple-fg-size:95px; --mdc-ripple-fg-scale:1.85686; --mdc-ripple-fg-translate-start:25.5px, -25.5px; --mdc-ripple-fg-translate-end:32.1641px, -23.5px;"></span>
                 </button>
                 <!---->
-                <button @onclick="@(e => UpdateSideTabs("sended"))" role="tab" class="mdc-tab" aria-selected="false" tabindex="-1">
+                <button role="tab" class="mdc-tab" aria-selected="false" tabindex="-1">
                     <span class="mdc-tab__content">
                         <i aria-hidden="true" class="material-icons mdc-tab__icon">
                             <svg width="24px" height="24px" viewBox="0 0 6.3499999 6.3500002" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path d="@tabIcons["sended"][0]"/>
+                                <path d="@tabIcons["sended"][0]" />
                             </svg>
                         </i>
                     </span>
@@ -31,11 +31,11 @@
                     <span class="mdc-tab__ripple" style="--mdc-ripple-fg-size:95px; --mdc-ripple-fg-scale:1.85686; --mdc-ripple-fg-translate-start:9.17188px, -11.5px; --mdc-ripple-fg-translate-end:32.1641px, -23.5px;"></span>
                 </button>
                 <!---->
-                <button  @onclick="@(e => UpdateSideTabs("all"))" role="tab" class="mdc-tab" aria-selected="false" tabindex="-1">
+                <button role="tab" class="mdc-tab" aria-selected="false" tabindex="-1">
                     <span class="mdc-tab__content">
                         <i aria-hidden="true" class="material-icons mdc-tab__icon">
                             <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path d="@tabIcons["all"][0]"/>
+                                <path d="@tabIcons["all"][0]" />
                             </svg>
                         </i>
                     </span>
@@ -50,10 +50,12 @@
     </div>
 </div>
 
+@inject IJSRuntime JSRuntime
+
 @code {
 
     Dictionary<string, string[]> tabIcons = new Dictionary<string, string[]>
-    {
+{
         // Selected, Regular and Filled.
         { "home", new string[3]{
             null,
@@ -72,7 +74,7 @@
         }}
     };
 
-    private void UpdateSideTabs(string id)
+    private void UpdateIcons(string id)
     {
         // Establecer todos los iconos a Regular.
         for (int i = 0; i < tabIcons.Count; i++)
