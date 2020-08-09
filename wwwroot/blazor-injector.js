@@ -4,6 +4,12 @@ window.blazorInjector = () => {
     const sideTab = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
     sideTab.listen('MDCTabBar:activated', (e) => {
+
         console.log("Hello Friend. Index of the tab activated: " + e.detail.index);
+
+        // DotNet.invokeMethod('UpdateIcons', "sended");
+        // DotNet.invokeMethod('Letters', 'UpdateIcons', e.detail.index.toString());
+        DotNet.invokeMethod('Letters', 'PrintTest');
+        // DotNet.dispose();
     });
 }

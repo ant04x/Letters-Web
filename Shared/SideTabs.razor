@@ -74,13 +74,20 @@
         }}
     };
 
-    private void UpdateIcons(string id)
+    [JSInvokable]
+    public void UpdateIcons(string id)
     {
         // Establecer todos los iconos a Regular.
         for (int i = 0; i < tabIcons.Count; i++)
             tabIcons[tabIcons.ElementAt(i).Key][0] = tabIcons.ElementAt(i).Value[1];
 
         tabIcons[id][0] = tabIcons[id][2]; // Establecer el icono seleccionado como Filled.
+    }
+
+    [JSInvokable]
+    public void PrintTest()
+    {
+        Console.WriteLine("Superman!");
     }
 
     protected override void OnInitialized()
