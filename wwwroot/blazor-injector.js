@@ -1,3 +1,11 @@
+var GLOBAL = {};
+GLOBAL.DotNetReference = null;
+GLOBAL.SetDotnetReference = function (pDotNetReference) {
+    if (GLOBAL.DotNetReference === null) {
+        GLOBAL.DotNetReference = pDotNetReference;
+    }
+};
+
 window.blazorInjector = () => {
 
     // Se obtiene el elemento del HTML suponiendo q no haya que MDCTabBar se pueda acceder sin ruta mdc...
@@ -9,7 +17,7 @@ window.blazorInjector = () => {
 
         // DotNet.invokeMethod('UpdateIcons', "sended");
         // DotNet.invokeMethod('Letters', 'UpdateIcons', e.detail.index.toString());
-        DotNet.invokeMethod('Letters', 'PrintTest');
+        GLOBAL.DotNetReference.invokeMethod('UpdateIcons', e.detail.index.toString());
         // DotNet.dispose();
     });
 }
