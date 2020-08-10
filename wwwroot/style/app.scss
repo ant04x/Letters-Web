@@ -1,4 +1,9 @@
-﻿:root {
+﻿@use '@material/button/mdc-button';
+@use '@material/button';
+
+@include button.core-styles;
+
+:root {
     --mdc-theme-secondary: #6200ee
 }
 
