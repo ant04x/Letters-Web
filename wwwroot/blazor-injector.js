@@ -15,9 +15,9 @@ window.blazorInjector = () => {
 
         console.log("Hello Friend. Index of the tab activated: " + e.detail.index);
 
-        // DotNet.invokeMethod('UpdateIcons', "sended");
-        // DotNet.invokeMethod('Letters', 'UpdateIcons', e.detail.index.toString());
-        GLOBAL.DotNetReference.invokeMethod('UpdateIcons', e.detail.index.toString());
-        // DotNet.dispose();
+            // DotNet.invokeMethod('UpdateIcons', "sended");
+            // DotNet.invokeMethod('Letters', 'UpdateIcons', e.detail.index.toString());
+        // GLOBAL.DotNetReference.invokeMethod('UpdateIcons', e.detail.index.toString());
+            // DotNet.dispose();
     });
 }
