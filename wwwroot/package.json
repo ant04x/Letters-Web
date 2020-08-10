@@ -1,0 +1,21 @@
+{
+  "name": "letters-web-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "author": "Antonio Izquierdo �lvarez",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
