@@ -4,8 +4,35 @@
 @use '@material/button/mdc-button';
 @use '@material/button';
 
+@use "@material/tab/mdc-tab";
+
+@use "@material/list";
+
+@use "@material/checkbox";
+@use "@material/form-field";
+
+@use "@material/card";
+
+@use "@material/fab";
+
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+
 @include icon-button.core-styles;
 @include button.core-styles;
+
+@include list.core-styles;
+
+@include checkbox.core-styles;
+@include form-field.core-styles;
+
+@include card.core-styles;
+
+@include fab.core-styles;
+
+@include textfield.core-styles;
 
 :root {
     --mdc-theme-secondary: #6200ee
