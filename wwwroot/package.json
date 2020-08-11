@@ -26,6 +26,8 @@
   },
   "dependencies": {
     "@material/button": "^7.0.0",
-    "@material/ripple": "^7.0.0"
+    "@material/icon-button": "^7.0.0",
+    "@material/ripple": "^7.0.0",
+    "@material/top-app-bar": "^7.0.0"
   }
 }
