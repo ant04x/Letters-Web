@@ -44,3 +44,8 @@ const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
 import { MDCTextField } from '@material/textfield';
 
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
+
+// Register TextField on AutoInit
+// import mdcAutoInit from '@material/auto-init';
+// mdcAutoInit.register('MDCTextField', MDCTextField);
+// mdcAutoInit.register('MDCTabBar', MDCTabBar);
