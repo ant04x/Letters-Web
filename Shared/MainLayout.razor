@@ -311,8 +311,8 @@
 
     protected override void OnAfterRender(bool x)
     {
-        JSRuntime.InvokeVoidAsync("mdc.autoInit");
         JSRuntime.InvokeVoidAsync("onLoadDo");
+        JSRuntime.InvokeVoidAsync("mdc.autoInit");
         // JSRuntime.InvokeVoidAsync("mdcAutoInit.register", "MDCTextField", "MDCTextField");
     }
 }
