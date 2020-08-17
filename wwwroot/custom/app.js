@@ -22,21 +22,23 @@ formField.input = checkbox;
 // Ripple for List
 const listItemRipples = list.listElements.map((listItemEl) => new mdc.ripple.MDCRipple(listItemEl));
 
-// Tab Bar
-const tabBar = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
-
-// Tab Scroller
-const tabScroller = new mdc.tabScroller.MDCTabScroller(document.querySelector('.mdc-tab-scroller'));
 
 // Tab
 const tabs = [].map.call(document.querySelectorAll('.mdc-tab'), function (el) {
     return new mdc.tab.MDCTab(el);
 });
 
+// Tab Bar
+const tabBar = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
+
 // Tab Indicator
 const tabIndicators = [].map.call(document.querySelectorAll('.mdc-tab-indicator'), function (el) {
     return new mdc.tabIndicator.MDCTabIndicator(el);
 });
+
+// Tab Scroller
+const tabScroller = new mdc.tabScroller.MDCTabScroller(document.querySelector('.mdc-tab-scroller'));
+
 
 // Cards
 const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
