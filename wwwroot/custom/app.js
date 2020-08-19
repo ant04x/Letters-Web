@@ -16,7 +16,7 @@ const list = new mdc.list.MDCList(document.querySelector('.mdc-list'));
 
 // Checkbox
 const checkbox = new mdc.checkbox.MDCCheckbox(document.querySelector('.mdc-checkbox'));
-const formField = new mdc.formField.MDCFormField(document.querySelector('.mdc-form-field'));
+const formField = new mdc.formField.MDCFormField(document.querySelector('.mdc-form-field')); // BUG SOLVED
 formField.input = checkbox;
 
 // Ripple for List
@@ -41,10 +41,10 @@ const tabScroller = new mdc.tabScroller.MDCTabScroller(document.querySelector('.
 
 
 // Cards
-const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+/*const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
 const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
     return new mdc.ripple.MDCRipple(el);
-});
+});*/
 
 // FAB
 const fabRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-fab'));

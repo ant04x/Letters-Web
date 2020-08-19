@@ -7,12 +7,12 @@
     <base href="/" />
     <link href="manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
-        <!--<link href="https://unpkg.com/material-components-web@5.1.0/dist/material-components-web.min.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="./dist/bundle.css">
+    <!--<link href="https://unpkg.com/material-components-web@5.1.0/dist/material-components-web.min.css" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <!--TEMP-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <!--<script src="https://unpkg.com/material-components-web@5.1.0/dist/material-components-web.min.js"></script>-->
+    <link rel="stylesheet" href="./dist/bundle.css">
+    <!--<script src="https://unpkg.com/material-components-web@5.1.0/dist/material-components-web.min.js"></script>-->
     <script src="on-load-container.js"></script>
     <title>Letters</title>
 </head>
@@ -21,18 +21,9 @@
     <app>
         <div id="welcome-app">
             <img id="welcome-app-image" src="img/logo-shadow.png" alt="App logo">
-
-            <!--TEST NODEJS-->
-            <button class="foo-button mdc-button">
-                <div class="mdc-button__ripple"></div>
-                <span class="mdc-button__label">Button</span>
-            </button>
-            <!--TEST NODEJS ENDS-->
-
         </div>
     </app>
     <!--TEMP NODEJS TEST-->
-    <!--<script src="./dist/bundle.js" async></script>-->
     <!--END TEMP NODEJS TEST-->
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>

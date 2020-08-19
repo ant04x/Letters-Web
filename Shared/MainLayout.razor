@@ -20,18 +20,20 @@
         <ul id="my-list" class="emailList mdc-list mdc-list--two-line" role="listbox group" aria-label="List with checkbox items">
             <li class="mdc-list-item" role="option checkbox" aria-checked="false" tabindex="0">
                 <span class="mdc-list-item__graphic">
-                    <div class="mdc-checkbox">
-                        <input type="checkbox"
-                               class="mdc-checkbox__native-control"
-                               id="demo-list-checkbox-item-1" />
-                        <div class="mdc-checkbox__background">
-                            <svg class="mdc-checkbox__checkmark"
-                                 viewBox="0 0 24 24">
-                                <path class="mdc-checkbox__checkmark-path"
-                                      fill="none"
-                                      d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                            </svg>
-                            <div class="mdc-checkbox__mixedmark"></div>
+                    <div class="mdc-form-field">
+                        <div class="mdc-checkbox">
+                            <input type="checkbox"
+                                   class="mdc-checkbox__native-control"
+                                   id="demo-list-checkbox-item-1" />
+                            <div class="mdc-checkbox__background">
+                                <svg class="mdc-checkbox__checkmark"
+                                     viewBox="0 0 24 24">
+                                    <path class="mdc-checkbox__checkmark-path"
+                                          fill="none"
+                                          d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                </svg>
+                                <div class="mdc-checkbox__mixedmark"></div>
+                            </div>
                         </div>
                     </div>
                 </span>
@@ -308,10 +310,8 @@
 @inject IJSRuntime JSRuntime
 
 @code {
-
     protected override void OnAfterRender(bool x)
     {
         JSRuntime.InvokeVoidAsync("onLoadDo");
     }
 }
-
