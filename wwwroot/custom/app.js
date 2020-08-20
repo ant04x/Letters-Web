@@ -9,7 +9,10 @@ const iconButtonRipple = new mdc.ripple.MDCRipple(document.querySelector('.mdc-i
 iconButtonRipple.unbounded = true;
 
 // Textfield
-const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+    //const textField = new mdc.textField.MDCTextField(document.querySelector('.mdc-text-field'));
+const textFields = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+    return new mdc.textField.MDCTextField(el);
+});
 
 // List
 const list = new mdc.list.MDCList(document.querySelector('.mdc-list'));
