@@ -110,8 +110,11 @@ body main {
     height: calc(100% - 20px);
 }
 
-.emailCard .mdc-card__primary-action {
+.emailCard .writingMail {
     height: inherit;
+    display:flex;
+    flex-direction:column;
+    position:relative;
 }
 
 #test {
