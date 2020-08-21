@@ -302,8 +302,11 @@
 @inject IJSRuntime JSRuntime
 
 @code {
-    protected override void OnAfterRender(bool x)
+
+
+
+    protected override async void OnAfterRender(bool x)
     {
-        JSRuntime.InvokeVoidAsync("onLoadDo");
+        await JSRuntime.InvokeVoidAsync("onLoadDo");
     }
 }

@@ -90,14 +90,16 @@ body main {
 
 .addresseTextField,
 .affairTextField {
-    margin-top:15px;
-    margin-left:15px;
-    margin-right:15px;
+    margin-top:16px;
+    margin-left:8px;
+    margin-right:8px;
 }
 
 .emailContent {
-    margin: 15px;
-    height:inherit;
+    margin-top: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: inherit;
 }
 
 .emailContent .mdc-text-field--textarea {
