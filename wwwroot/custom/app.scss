@@ -1,47 +1,47 @@
 ﻿@use "material-components-web/material-components-web";
 
 :root {
-    --mdc-theme-secondary: #6200ee
+    --mdc-theme-secondary: #6200ee;
 }
 
 html {
-    height: 100%
+    height: 100%;
 }
 
 body {
     margin: 0;
-    height: 100%
+    height: 100%;
 }
 
 body main {
     height: calc(100% - 64px);
-    display: flex
+    display: flex;
 }
 
 @media only screen and (max-width:600px) {
     body main {
-        height: calc(100% - 56px)
+        height: calc(100% - 56px);
     }
 }
 
 #topBarLogo {
     height: 65%;
-    margin-left: 15px
+    margin-left: 15px;
 }
 
 @media (max-width:599px) {
     #topBarLogo {
-        margin-left: 4px
+        margin-left: 4px;
     }
 }
 
 #leftMenu,
 .contentMail {
-    display: block
+    display: block;
 }
 
 #leftMenu .mdc-list {
-    width: 25em
+    width: 25em;
 }
 
 #leftMenu {
@@ -50,7 +50,7 @@ body main {
     height: 100%;
     border-color: rgba(0,0,0,.12);
     border-right-width: 1px;
-    border-right-style: solid
+    border-right-style: solid;
 }
 
 #leftMenu .emailList {
@@ -58,11 +58,11 @@ body main {
     height: calc(100% - 105px);
     padding: 0;
     overflow-y: auto;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 .searchBar {
-    width: 100%
+    width: 100%;
 }
 
 .botTabBar {
@@ -75,25 +75,43 @@ body main {
     width: calc(100% - 25em);
     max-width: 100%;
     height: 100%;
-    overflow-y: auto
+    overflow-y: auto;
 }
 
 .mdc-top-app-bar {
     position: unset;
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15)
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);
 }
 
 .mdc-top-app-bar .mdc-top-app-bar__action-item,
 .mdc-top-app-bar .mdc-top-app-bar__navigation-icon {
-    --icon-ink-color: red
+    --icon-ink-color: red;
+}
+
+.addresseTextField,
+.affairTextField {
+    margin-top:15px;
+    margin-left:15px;
+    margin-right:15px;
 }
 
 .emailContent {
-    margin: 10px
+    margin: 15px;
+    height:inherit;
+}
+
+.emailContent .mdc-text-field--textarea {
+    width: 100%;
+    height:100%;
 }
 
 .emailCard {
-    margin: 10px
+    margin: 10px; 
+    height: calc(100% - 20px);
+}
+
+.emailCard .mdc-card__primary-action {
+    height: inherit;
 }
 
 #test {
@@ -104,29 +122,29 @@ body main {
     bottom: 0;
     width: 100%;
     height: fit-content;
-    text-align: right
+    text-align: right;
 }
 
 #buttonTest {
     pointer-events: auto;
-    margin-right: 2em;
-    margin-bottom: 2em
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .mdc-top-app-bar .mdc-top-app-bar__action-item::after,
 .mdc-top-app-bar .mdc-top-app-bar__action-item::before,
 .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::after,
 .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::before {
-    background-color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,.87))
+    background-color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,.87));
 }
 
 .mdc-top-app-bar .mdc-top-app-bar__action-item,
 .mdc-top-app-bar .mdc-top-app-bar__navigation-icon {
-    color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,.87))
+    color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,.87));
 }
 
 .mdc-top-app-bar {
-    background-color: #fff
+    background-color: #fff;
 }
 
 #welcome-app {
