@@ -305,8 +305,8 @@
 
 
 
-    protected override async void OnAfterRender(bool x)
+    protected override void OnAfterRender(bool x)
     {
-        await JSRuntime.InvokeVoidAsync("onLoadDo");
+        JSRuntime.InvokeVoidAsync("onLoadDo");
     }
 }
