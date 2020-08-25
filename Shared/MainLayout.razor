@@ -228,7 +228,7 @@
 
         <div class="mdc-card mdc-card--outlined emailCard">
 
-            <form class="writingMail">
+            <EditForm class="writingMail" Model="@editingMessage">
 
                 <label class="addresseTextField mdc-text-field mdc-text-field--outlined">
                     <span class="mdc-notched-outline">
@@ -238,7 +238,8 @@
                         </span>
                         <span class="mdc-notched-outline__trailing"></span>
                     </span>
-                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    <!--<input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">-->
+                    <InputText id="toEmail" @bind-Value="toEmailDir" type="text" class="mdc-text-field__input" aria-labelledby="my-label-id"/>
                 </label>
 
                 <label class="affairTextField mdc-text-field mdc-text-field--outlined">
@@ -249,7 +250,8 @@
                         </span>
                         <span class="mdc-notched-outline__trailing"></span>
                     </span>
-                    <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    <!--<input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">-->
+                    <InputText id="subjectEmail" @bind-Value="editingMessage.Subject" type="text" class="mdc-text-field__input" aria-labelledby="my-label-id2" />
                 </label>
 
                 <div class="emailContent">
@@ -258,31 +260,32 @@
                             <span class="mdc-notched-outline__leading"></span>
                             <span class="mdc-notched-outline__trailing"></span>
                         </span>
-                        <textarea class="mdc-text-field__input" rows="8" aria-label="Label"></textarea>
+                        <!--<textarea class="mdc-text-field__input" rows="8" aria-label="Label"></textarea>-->
+                        <InputTextArea id="bodyEmail" @bind-Value="bodyEmail" class="mdc-text-field__input" rows="8" aria-label="Label" />
                     </label>
                 </div>
 
-            </form>
-            <div class="mdc-card__actions">
-                <div class="mdc-card__action-buttons">
-                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Adjuntar">
-                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <path d="M11.7715948,3.74348899 C14.113054,1.39990252 17.9120439,1.39990252 20.2551897,3.74304827 C22.5382548,6.02611336 22.5967949,9.69132107 20.4308101,12.0452653 L20.2426506,12.2426307 L11.4426304,21.0408404 L11.4426304,21.0408404 L11.4060613,21.0710739 C9.94482388,22.3878538 7.69082246,22.3431052 6.28344814,20.9357309 C4.96443071,19.6167134 4.84231478,17.5540367 5.91710035,16.0973219 C5.94044402,16.0519637 5.96869088,16.0082157 6.00190455,15.9670689 L6.0554581,15.9074233 L6.14236585,15.819689 L6.28344814,15.671807 L6.28636585,15.674689 L13.7221045,8.22037508 C13.9880171,7.95375494 14.4046482,7.92899525 14.6985489,8.14645937 L14.7827638,8.21896569 C15.0493839,8.4848782 15.0741436,8.90150935 14.8566795,9.19541007 L14.7841732,9.27962492 L7.18955772,16.8927175 C6.471921,17.7683146 6.52180093,19.0625849 7.33919752,19.8799815 C8.16826244,20.7090464 9.48791296,20.7485257 10.3637003,19.9984193 L19.1963769,11.1679575 L19.1963769,11.1679575 C20.9518888,9.41031016 20.9518888,6.56106776 19.1945295,4.80370845 C17.4920877,3.10126661 14.7649391,3.0480653 12.9984531,4.64410452 L12.8305685,4.80370845 L12.8180195,4.81801948 L3.28169594,14.354343 C2.98880272,14.6472363 2.51392898,14.6472363 2.22103577,14.354343 C1.9547692,14.0880765 1.93056315,13.6714128 2.14841761,13.3778013 L2.22103577,13.2936829 L11.7699083,3.74304827 L11.7715948,3.74348899 Z" id="🎨-Color"></path>
-                        </svg>
-                    </button>
-                    <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Estilizar">
-                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <path d="M20.0624471,8.44531708 C21.3187966,9.70246962 21.3181456,11.7400656 20.060993,12.9964151 L12.9378099,20.1075964 C12.6748336,20.3701297 12.3509291,20.5634444 11.9950254,20.6702751 L7.7020125,21.9588974 C7.17304403,22.1176765 6.61551448,21.8175787 6.4567354,21.2886102 C6.39849549,21.0945854 6.40055641,20.8874478 6.4626453,20.6946202 L7.82404878,16.466551 C7.93368607,16.1260538 8.12292759,15.8166043 8.37607629,15.5638705 L15.5089127,8.44272265 C16.767237,7.18646041 18.8055552,7.18762176 20.0624471,8.44531708 Z M16.5687028,9.50425223 L9.43586633,16.6254001 C9.35148343,16.7096447 9.28840293,16.8127945 9.25185716,16.9262936 L8.18207614,20.2486798 L11.563783,19.2336018 C11.6824175,19.1979916 11.7903857,19.1335534 11.8780445,19.0460423 L19.0000352,11.936052 C19.6718508,11.2646659 19.6721983,10.1768173 19.0014481,9.50563832 C18.3299482,8.83370918 17.2409679,8.83308872 16.5687028,9.50425223 Z M8.1508398,2.36975012 L8.20132289,2.47486675 L11.4537996,10.724 L10.2967996,11.879 L9.5557996,10 L5.4427996,10 L4.44747776,12.5208817 C4.30788849,12.8739875 3.9301318,13.0620782 3.57143476,12.9736808 L3.47427411,12.9426336 C3.1211683,12.8030443 2.93307758,12.4252876 3.02147501,12.0665906 L3.05252224,11.9694299 L6.80613337,2.47427411 C7.0415216,1.87883471 7.84863764,1.84414583 8.1508398,2.36975012 Z M7.50274363,4.79226402 L6.0357996,8.5 L8.9637996,8.5 L7.50274363,4.79226402 Z" id="🎨-Color"></path>
-                        </svg>
-                    </button>
+                <div class="mdc-card__actions">
+                    <div class="mdc-card__action-buttons">
+                        <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Adjuntar">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M11.7715948,3.74348899 C14.113054,1.39990252 17.9120439,1.39990252 20.2551897,3.74304827 C22.5382548,6.02611336 22.5967949,9.69132107 20.4308101,12.0452653 L20.2426506,12.2426307 L11.4426304,21.0408404 L11.4426304,21.0408404 L11.4060613,21.0710739 C9.94482388,22.3878538 7.69082246,22.3431052 6.28344814,20.9357309 C4.96443071,19.6167134 4.84231478,17.5540367 5.91710035,16.0973219 C5.94044402,16.0519637 5.96869088,16.0082157 6.00190455,15.9670689 L6.0554581,15.9074233 L6.14236585,15.819689 L6.28344814,15.671807 L6.28636585,15.674689 L13.7221045,8.22037508 C13.9880171,7.95375494 14.4046482,7.92899525 14.6985489,8.14645937 L14.7827638,8.21896569 C15.0493839,8.4848782 15.0741436,8.90150935 14.8566795,9.19541007 L14.7841732,9.27962492 L7.18955772,16.8927175 C6.471921,17.7683146 6.52180093,19.0625849 7.33919752,19.8799815 C8.16826244,20.7090464 9.48791296,20.7485257 10.3637003,19.9984193 L19.1963769,11.1679575 L19.1963769,11.1679575 C20.9518888,9.41031016 20.9518888,6.56106776 19.1945295,4.80370845 C17.4920877,3.10126661 14.7649391,3.0480653 12.9984531,4.64410452 L12.8305685,4.80370845 L12.8180195,4.81801948 L3.28169594,14.354343 C2.98880272,14.6472363 2.51392898,14.6472363 2.22103577,14.354343 C1.9547692,14.0880765 1.93056315,13.6714128 2.14841761,13.3778013 L2.22103577,13.2936829 L11.7699083,3.74304827 L11.7715948,3.74348899 Z" id="🎨-Color"></path>
+                            </svg>
+                        </button>
+                        <button class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Estilizar">
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M20.0624471,8.44531708 C21.3187966,9.70246962 21.3181456,11.7400656 20.060993,12.9964151 L12.9378099,20.1075964 C12.6748336,20.3701297 12.3509291,20.5634444 11.9950254,20.6702751 L7.7020125,21.9588974 C7.17304403,22.1176765 6.61551448,21.8175787 6.4567354,21.2886102 C6.39849549,21.0945854 6.40055641,20.8874478 6.4626453,20.6946202 L7.82404878,16.466551 C7.93368607,16.1260538 8.12292759,15.8166043 8.37607629,15.5638705 L15.5089127,8.44272265 C16.767237,7.18646041 18.8055552,7.18762176 20.0624471,8.44531708 Z M16.5687028,9.50425223 L9.43586633,16.6254001 C9.35148343,16.7096447 9.28840293,16.8127945 9.25185716,16.9262936 L8.18207614,20.2486798 L11.563783,19.2336018 C11.6824175,19.1979916 11.7903857,19.1335534 11.8780445,19.0460423 L19.0000352,11.936052 C19.6718508,11.2646659 19.6721983,10.1768173 19.0014481,9.50563832 C18.3299482,8.83370918 17.2409679,8.83308872 16.5687028,9.50425223 Z M8.1508398,2.36975012 L8.20132289,2.47486675 L11.4537996,10.724 L10.2967996,11.879 L9.5557996,10 L5.4427996,10 L4.44747776,12.5208817 C4.30788849,12.8739875 3.9301318,13.0620782 3.57143476,12.9736808 L3.47427411,12.9426336 C3.1211683,12.8030443 2.93307758,12.4252876 3.02147501,12.0665906 L3.05252224,11.9694299 L6.80613337,2.47427411 C7.0415216,1.87883471 7.84863764,1.84414583 8.1508398,2.36975012 Z M7.50274363,4.79226402 L6.0357996,8.5 L8.9637996,8.5 L7.50274363,4.79226402 Z" id="🎨-Color"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </EditForm>
         </div>
 
         <div id="test">
 
             <div class="mdc-card__action-icons">
-                <button id="buttonTest" class="mdc-fab mdc-fab--extended">
+                <button @onclick="@OnSendClick" id="buttonTest" class="mdc-fab mdc-fab--extended">
                     <div class="mdc-fab__ripple"></div>
                     <span class="material-icons mdc-fab__icon">
                         <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -302,6 +305,32 @@
 @inject IJSRuntime JSRuntime
 
 @code {
+
+    private string toEmailDir;
+    private string bodyEmail;
+    // private List<T> emailAttachments;
+    private MimeMessage editingMessage = new MimeMessage()
+    {
+        Sender = new MailboxAddress("Antonio Izquierdo Álvarez", "antonioizquierdoalvarez@outlook.com"),
+    };
+
+    protected async void OnSendClick()
+    {
+        editingMessage.Body = new TextPart(TextFormat.Plain) { Text = bodyEmail };
+        editingMessage.To.Add(new MailboxAddress("", toEmailDir));
+        // editingMessage.Attachments.Aggregate<>
+
+        using (var smtp = new MailKit.Net.Smtp.SmtpClient())
+        {
+            smtp.MessageSent += (sender, args) => Console.WriteLine("Email enviado satisfactoriamente.");
+            smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+            await smtp.ConnectAsync("smtp-mail.outlook.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+            await smtp.AuthenticateAsync("antonioizquierdoalvarez@outlook.com", "Password");
+            await smtp.SendAsync(editingMessage);
+            await smtp.DisconnectAsync(true);
+        }
+    }
 
     protected override void OnAfterRender(bool x)
     {
