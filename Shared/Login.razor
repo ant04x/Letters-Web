@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
 
 <EditForm class="loginScreen" Model="@Creds">
 
@@ -26,13 +27,11 @@
         <InputText id="subjectEmail" @bind-Value="Creds.UserPass" type="text" class="mdc-text-field__input" aria-labelledby="my-label-id2" />
     </label>
 
-    <button class="mdc-button--raised">
+    <button @onclick="OnEnterClick" type="submit" class="mdc-button--raised">
         <span class="mdc-button__label">Entrar</span>
     </button>
 
 </EditForm>
-
-@inject NavigationManager NavigationManager
 
 @code {
 
@@ -53,7 +52,7 @@
             await smtp.AuthenticateAsync(Login.Creds.UserName, Login.Creds.UserPass);
             await smtp.DisconnectAsync(true);
         }
-        NavigationManager.NavigateTo(MainLayout);
+        NavigationManager.NavigateTo("/home", true);
     }
 
 }
