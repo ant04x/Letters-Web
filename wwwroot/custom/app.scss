@@ -11,6 +11,7 @@ html {
 body {
     margin: 0;
     height: 100%;
+    background-color:red;
 }
 
 body main {
@@ -18,9 +19,28 @@ body main {
     display: flex;
 }
 
+body .loginContainer {
+    height: calc(100% - 64px);
+    display: flex;
+    align-items: center;
+}
+
+.loginContainer .loginCard {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+    margin-bottom:64px;
+}
+
 @media only screen and (max-width:600px) {
     body main {
         height: calc(100% - 56px);
+    }
+    body .loginContainer {
+        height: calc(100% - 56px);
+    }
+    body .loginCard {
+        margin-bottom: 56px;
     }
 }
 
