@@ -1,5 +1,4 @@
-﻿@inherits LayoutComponentBase
-@inject NavigationManager NavigationManager
+﻿@page "/login"
 
 <EditForm class="loginScreen" Model="@Creds">
 
@@ -33,6 +32,8 @@
 
 </EditForm>
 
+@inject NavigationManager NavigationManager
+
 @code {
 
     public static Credentials Creds
@@ -41,6 +42,12 @@
         private set;
     } = new Credentials();
 
+    public static bool IsSuccess
+    {
+        get;
+        private set;
+    } = false;
+
     protected async void OnEnterClick()
     {
         using (var smtp = new MailKit.Net.Smtp.SmtpClient())
@@ -48,11 +55,19 @@
             smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
             Console.WriteLine("NOMBRE DE USUARIO Y PASS: " + Login.Creds.UserName + " " + Login.Creds.UserPass);
 
-            await smtp.ConnectAsync("smtp-mail.outlook.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-            await smtp.AuthenticateAsync(Login.Creds.UserName, Login.Creds.UserPass);
-            await smtp.DisconnectAsync(true);
+            try
+            {
+                await smtp.ConnectAsync("smtp-mail.outlook.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+                await smtp.AuthenticateAsync(Login.Creds.UserName, Login.Creds.UserPass);
+                await smtp.DisconnectAsync(true);
+                IsSuccess = true;
+            } catch
+            {
+                Console.WriteLine("ERROR: Login connection fails.");
+                IsSuccess = false;
+            }
         }
-        NavigationManager.NavigateTo("/home", true);
+        NavigationManager.NavigateTo("/");
     }
 
 }
