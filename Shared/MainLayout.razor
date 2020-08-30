@@ -3,3 +3,14 @@
 
 <NavMenu />
 @Body
+
+@inject IJSRuntime JSRuntime
+
+@code {
+
+    protected override void OnAfterRender(bool x)
+    {
+        JSRuntime.InvokeVoidAsync("onLoadDo");
+    }
+
+}

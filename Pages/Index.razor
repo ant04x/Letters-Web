@@ -299,15 +299,10 @@
 
 </main>
 
-
-@inject IJSRuntime JSRuntime
-
 @code {
 
     private string toEmailDir;
     private string bodyEmail;
-
-
 
     private MimeMessage editingMessage = new MimeMessage()
     {
@@ -330,10 +325,5 @@
             await smtp.SendAsync(editingMessage);
             await smtp.DisconnectAsync(true);
         }
-    }
-
-    protected override void OnAfterRender(bool x)
-    {
-        JSRuntime.InvokeVoidAsync("onLoadDo");
     }
 }
