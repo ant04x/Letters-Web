@@ -63,11 +63,13 @@
                 IsSuccess = true;
             } catch
             {
-                Console.WriteLine("ERROR: Login connection fails.");
                 IsSuccess = false;
             }
         }
-        NavigationManager.NavigateTo("/");
+        if (IsSuccess == true)
+            NavigationManager.NavigateTo("/");
+        else
+            Console.WriteLine("WARNING: Login unsuccessfull.");
     }
 
 }

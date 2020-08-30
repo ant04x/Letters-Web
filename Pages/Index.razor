@@ -306,30 +306,28 @@
 
     private string toEmailDir;
     private string bodyEmail;
-    // private List<T> emailAttachments;
 
 
 
     private MimeMessage editingMessage = new MimeMessage()
     {
-        Sender = new MailboxAddress("Antonio Izquierdo Álvarez", "antonioizquierdoalvarez@outlook.com"),
+        Sender = new MailboxAddress("", Login.Creds.UserName),
     };
 
     protected async void OnSendClick()
     {
         editingMessage.Body = new TextPart(TextFormat.Plain) { Text = bodyEmail };
+        editingMessage.To.Clear();
         editingMessage.To.Add(new MailboxAddress("", toEmailDir));
-        // editingMessage.Attachments.Aggregate<>
 
         using (var smtp = new MailKit.Net.Smtp.SmtpClient())
         {
             smtp.MessageSent += (sender, args) => Console.WriteLine("Email enviado satisfactoriamente.");
             smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
-            Console.WriteLine("NOMBRE DE USUARIO Y PASS: " + Login.Creds.UserName + " " + Login.Creds.UserPass);
 
             await smtp.ConnectAsync("smtp-mail.outlook.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
             await smtp.AuthenticateAsync(Login.Creds.UserName, Login.Creds.UserPass);
-            // await smtp.SendAsync(editingMessage);
+            await smtp.SendAsync(editingMessage);
             await smtp.DisconnectAsync(true);
         }
     }
