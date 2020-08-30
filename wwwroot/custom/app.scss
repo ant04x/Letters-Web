@@ -11,7 +11,6 @@ html {
 body {
     margin: 0;
     height: 100%;
-    background-color:red;
 }
 
 body main {
@@ -32,13 +31,35 @@ body .loginContainer {
     margin-bottom:64px;
 }
 
+.loginCard label {
+    width: inherit;
+    display: flex;
+}
+
+.loginCard .rightLoginActions {
+    margin-left:auto;
+}
+
+.loginCard .loginPersonImage {
+    color: #212121;
+    display: flex;
+    margin: 1em auto;
+}
+
+.loginPersonImage svg {
+    margin: 0 auto;
+    fill:currentColor;
+}
+
 @media only screen and (max-width:600px) {
     body main {
         height: calc(100% - 56px);
     }
+
     body .loginContainer {
         height: calc(100% - 56px);
     }
+
     body .loginCard {
         margin-bottom: 56px;
     }
