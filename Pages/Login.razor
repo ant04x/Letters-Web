@@ -72,7 +72,7 @@
         using (var smtp = new MailKit.Net.Smtp.SmtpClient())
         {
             smtp.ServerCertificateValidationCallback = (s, c, h, e) => true;
-            Console.WriteLine("NOMBRE DE USUARIO Y PASS: " + Login.Creds.UserName + " " + Login.Creds.UserPass);
+            // Console.WriteLine("NOMBRE DE USUARIO Y PASS: " + Login.Creds.UserName + " " + Login.Creds.UserPass);
 
             try
             {
